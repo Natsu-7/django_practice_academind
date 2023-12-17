@@ -1,9 +1,16 @@
-<html>
-<head>
-    <title> {{ month|title }} Challenge</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block page_title %}
+{{ month|title }} Challenge
+{% endblock %}
+
+{% block content %}
+
 <h1> {{ month|title }} Challenge : </h1>
-<h2> {{ challenge }} </h2>
-</body>
-</html>
+{% if challenge is not None %}
+    <h2> {{ challenge }} </h2>
+{% else %}
+    <p>The Challenge is not set for this month</p>
+{% endif  %}
+
+{% endblock %}

@@ -5,22 +5,21 @@ from django.urls import reverse
 # Create your views here.
 monthly_challenges = {
     "january": "Focus on Crosshair Placement",
-    "february": "Focus on 'Move,Aim and then Shoot Protocol'",
+    "february": "Focus on 'Move,Aim and then Shoot' Protocol",
     "march": "Focus on K.I.S.S Protocol",
-    "april": "Focus on Indvidual Plays",
+    "april": None,
     "may": "Focus on Minimap",
     "june": "Focus on Tracking",
     "july": "Improvise your mechanics",
     "august": "Win more cluthes",
-    "septmeber": "Master Phoenix",
+    "september": "Master Phoenix",
     "october": "Master Yoru",
-    "november": "Keep Omen as Substitute",
+    "november": None,
     "december": "Reach Radiant in No Time"
 }
 
 
 def index(request):
-    list_items = ""
     months = list(monthly_challenges.keys())
 
     return render(request, "challenges/index.html", {
